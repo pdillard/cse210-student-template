@@ -1,11 +1,15 @@
-public class Prompts {
+using System.Collections.Generic;
+using System.IO;
+
+public class Prompts
+{
     List<string> _prompts = new List<string> {
-            "Who was the most interesting person I interacted with today?", 
-            "What was the best part of my day", 
-            "How did I see the hand of the Lord in my life today?", 
-            "What was the strongest emotion I felt today?", 
-            "If I had one thing I could do over today, what would it be?", 
-            "What is something I learned about myself recently?", 
+            "Who was the most interesting person I interacted with today?",
+            "What was the best part of my day?",
+            "How did I see the hand of the Lord in my life today?",
+            "What was the strongest emotion I felt today?",
+            "If I had one thing I could do over today, what would it be?",
+            "What is something I learned about myself recently?",
             "What habits are helping me grow—and which ones are holding me back?",
             "When did I feel most confident this week, and why?",
             "How have I changed in the past year?",
@@ -27,14 +31,12 @@ public class Prompts {
             "What would life look like if I wasn't afraid?"
     };
 
-    public string randomGen() {
-        Random r = new Random ();
+    public string GetRandomPrompt()
+    {
+        Random r = new Random();
         int index = r.Next(_prompts.Count);
         string _randomString = _prompts[index];
 
         return _randomString;
     }
-
-    
-
 }
