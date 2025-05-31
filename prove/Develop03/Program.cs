@@ -1,9 +1,18 @@
 using System;
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+
+    public static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop03 World!");
+        Scripture scripture1 = new Scripture("Helaman 5:12", new List<string>()
+        {
+
+        });
+
+        using (StreamReader reader = new StreamReader("proverbs_3_5-6.txt"))
+        {
+             Scripture scripture2 = new Scripture(reader);
+        }
     }
 }
