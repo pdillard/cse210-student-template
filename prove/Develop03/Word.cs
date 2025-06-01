@@ -8,4 +8,19 @@ public class Word
         _text = text;
         _visable = true;
     }
+
+    public void Hide()
+    {
+        _visable = false;
+    }
+
+    public bool IsHidden()
+    {
+        return !_visable;
+    }
+
+    public string GetDisplayText()
+    {
+        return _visable ? _text : "______"; 
+    }
 }
